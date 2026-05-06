@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Login</title>
+</head>
+<style>
+.background{
+background-color: lightgray;
+width: 100%;
+height: 950px;
+}
+.box1{
+         width: 900px;
+        height: 350px;
+        color: black;
+        text-align: center;
+        background: white;
+        position: relative;
+        border: 2px solid #333;
+        top: 150px;
+        left: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 2px 2px 5px rgb(0, 0, 0);
+        border: none;
+
+}
+.fonteLogin{
+    text-align: center;
+   font-family: "Arial Narrow, sans-serif";
+   font-size: 15px;
+   color: black;
+   position: relative;
+   right: 50px;
+}
+.fonteSenha{
+    text-align: center;
+   font-family: "Arial Narrow, sans-serif";
+   font-size: 15px;
+   color: black;
+   position: relative;
+   right: 80px;
+}
+button{
+    width: 145px;
+    height: 30px;
+    color: white;
+    background-color:  tomato;
+    border-radius:5px;
+    border: none
+}
+input{
+border-radius: 4px;
+background-color: #CFECF3 ;
+width: 200px;
+height: 25px;
+}
+.titulo{
+ position: relative;
+ left: -400px;
+ top: -20px;
+ font-family: "Arial Narrow, sans-serif";
+}
+.itens{
+    position: relative;
+    top: -30px;
+}
+a{
+    text-decoration: none;
+    color: tomato;
+    position: relative;
+    right: -10px;
+}
+
+
+
+</style>
+<body>
+    <div class="background">
+    <div class="box1">
+    <form method="post" class="">
+    <label for="EfetuarLogin" class="titulo">Efetuar Login</label>
+    <br>
+    <br>
+    <br>
+    <div class="itens">
+    <label for="Usuario" class="fonteLogin">Login ou Email</label>
+    <br>
+    <br>
+    <input type="text" name="usuario" required>
+    <br>
+    <br>
+    <label for="Senha" class="fonteSenha">Senha</label>
+    <br>
+    <br>
+    <input type="password" name="senha" required>
+    <br>
+    <br>
+    <br>
+   <button type="submit">Logar</button>
+   <br>
+   <br>
+   <a href="">Recuperar Senha</a>
+   <a >|</a>
+   <a href="">Criar meu Cadastro</a>
+   </div>
+    </form>
+    </div>
+    </div>
+</body>
+</html>
