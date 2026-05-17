@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pokémon TCG</title>
+<style>
+    
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#d7dde0;
+}
+
+header{
+    width:100%;
+    background:white;
+    border-bottom:2px solid #cfcfcf;
+}
+.topbar{
+    width:100%;
+    height:70px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:50px;
+}
+
+.topbar a{
+    text-decoration:none;
+    color:#333;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.topbar a:hover{
+    color:#ff3b3b;
+}
+
+.banner{
+    width:100%;
+    height:280px;
+    background:linear-gradient(135deg,#77d37d,#b6ffbe);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    color:white;
+    text-align:center;
+}
+
+.banner h1{
+    background:#d65a6f;
+    padding:12px 50px;
+    border-radius:5px;
+    font-size:32px;
+    margin-bottom:10px;
+}
+
+.banner p{
+    font-size:18px;
+    text-shadow:1px 1px 2px black;
+}
+
+.produtos{
+    width:100%;
+    padding:50px 0;
+    display:flex;
+    justify-content:center;
+    
+}
+.box-produtos{
+    width:1100px;
+}
+
+.titulo{
+    text-align:center;
+    margin-bottom:30px;
+    color:#222;
+    font-size:28px;
+}
+
+.lista{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.card{
+    width:200px;
+    background:white;
+    border-radius:10px;
+    padding:15px;
+    box-shadow:0 0 10px rgba(0,0,0,0.15);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card img{
+    width:100%;
+    border-radius:8px;
+}
+
+.card h3{
+    margin-top:10px;
+    font-size:18px;
+    color:#222;
+}
+
+.preco{
+    color:green;
+    font-weight:bold;
+    margin:10px 0;
+    font-size:18px;
+}
+
+.botao{
+    width:100%;
+    padding:10px;
+    border:none;
+    border-radius:6px;
+    background:#ff3b3b;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.botao:hover{
+    background:#d92d2d;
+}
+
+footer{
+    background:#1f1f1f;
+    color:white;
+    padding:50px 20px;
+    margin-top:50px;
+}
+
+.footer-container{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    flex-wrap:wrap;
+    gap:40px;
+    justify-content:center;
+    text-align:center;
+}
+
+.footer-box h2{
+    margin-bottom:15px;
+    color:#ff3b3b;
+}
+
+.footer-box p{
+      color:#ccc;
+    text-decoration:none;
+    line-height:28px;
+}
+.footer-box a{
+    color:#ccc;
+    text-decoration:none;
+    line-height:28px;
+}
+
+.footer-box a:hover{
+    color:white;
+}
+
+.copy{
+    text-align:center;
+    margin-top:40px;
+    border-top:1px solid #444;
+    padding-top:20px;
+    color:#999;
+}
+  
+.logo{
+    width:50px;
+    height:50px;
+    margin-right:40px;
+      position: relative;
+    left: -10px;
+}
+
+.logo img{
+    width:80px;
+    height:80px;
+}
+</style>
+</head>
+<body>
+<header>
+    <div class="topbar">
+         <img class="logo" src="pokebola.png" alt="Pokebola">
+        <a href="index.html">Inicio</a>
+        <a>Decks</a>
+        <a>Produtos</a>
+        <a>Leilões</a>
+        <a href="#">Sobre nós</a>
+        <a href="Login.html">Login</a>
+    </div>
+</header>
+
+<div class="produtos">
+
+    <div class="box-produtos">
+        <h2 class="titulo">Produtos em Destaque</h2>
+        <div class="lista">
+            <div class="card">
+                <img src="https://images.pokemontcg.io/base1/4.png" alt="">
+                <h3>Charizard</h3>
+                <p class="preco">R$ 199,90</p>
+                <button class="botao">Comprar</button>
+            </div>
+            <div class="card">
+                <img src="https://images.pokemontcg.io/base1/2.png" alt="">
+                <h3>Blastoise</h3>
+                <p class="preco">R$ 149,90</p>
+                <button class="botao">Comprar</button>
+            </div>
+            <div class="card">
+                <img src="https://images.pokemontcg.io/base1/15.png" alt="">
+                <h3>Venusaur</h3>
+                <p class="preco">R$ 179,90</p>
+                <button class="botao">Comprar</button>
+            </div>
+
+            <div class="card">
+                <img src="https://images.pokemontcg.io/base1/58.png" alt="">
+                <h3>Pikachu</h3>
+                <p class="preco">R$ 89,90</p>
+                <button class="botao">Comprar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="footer-container">
+        <div class="footer-box">
+            <h2>Pokémon TCG</h2>
+            <p>Seu site de cartas Pokémon.</p>
+        </div>
+        <div class="footer-box">
+            <h2>Links</h2>
+            <a href="#">Início</a><br>
+            <a href="#">Produtos</a><br>
+            <a href="#">Contato</a>
+        </div>
+        <div class="footer-box">
+            <h2>Redes Sociais</h2>
+            <p>Instagram</p>
+            <p>Facebook</p>
+            <p>Discord</p>
+        </div>
+    </div>
+    <div class="copy">
+        © 2026 Pokémon TCG - Todos os direitos reservados
+    </div>
+</footer>
+</body>
+</html>
