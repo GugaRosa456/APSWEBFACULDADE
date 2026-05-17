@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Cadastro</title>
+</head>
+<style>
+.background{
+background-color: lightgray;
+width: 100%;
+height: 950px;
+}
+.box1{
+         width: 900px;
+        height: 550px;
+        color: black;
+        text-align: center;
+        background: white;
+        position: relative;
+        border: 2px solid #333;
+        top: 150px;
+        left: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 2px 2px 5px rgb(0, 0, 0);
+        border: none;
+        border-radius: 15px;
+        
+}
+.FonteNome{
+    text-align: center;
+   font-family: "Verdana", Sans-serif;
+   font-size: 15px;
+   color: black;
+   position: relative;
+   right: 140px;
+}
+.FonteSenha{
+    text-align: center;
+   font-family: "Verdana", Sans-serif;
+   font-size: 15px;
+   color: black;
+   position: relative;
+   right:  140px;
+}
+.FonteEmail{
+    text-align: center;
+   font-family: "Verdana", Sans-serif;
+   font-size: 15px;
+   color: black;
+   position: relative;
+   right: 140px;
+}
+.FonteConfirmarSenha{
+    text-align: center;
+   font-family: "Verdana", Sans-serif;
+   font-size: 15px;
+   color: black;
+   position: relative;
+   right: 100px;
+}   
+.FonteCep{
+    text-align: center;
+   font-family: "Verdana", Sans-serif;
+   font-size: 15px;
+   color: black;
+   position: relative;
+   right: 145px;
+}
+button{
+    width: 175px;
+    height: 40px;
+    color: white;
+    background-color:  tomato;
+    border-radius:5px;
+    border: none
+}
+input{
+border-radius: 4px;
+background-color: #CFECF3 ;
+width: 325px;
+height: 25px;
+}
+.titulo{
+ position: relative;
+ left: -390px;
+ top: 10px;
+ font-family: "Verdana", Sans-serif;
+}
+.itens{
+    position: relative;
+    top: -30px;
+}
+a{
+    text-decoration: none;
+    color: tomato;
+    position: relative;
+    right: -10px;
+}
+
+</style>
+<body>
+    <div class="background">
+    <div class="box1">
+    <form method="post"  action="Login.html">
+    <label for="criarConta" class="titulo">Criar Conta</label>
+    <br>
+    <br>
+    <br>
+    <div class="itens">
+    <label for="Usuario" class="FonteNome">Nome</label>
+    <br>
+    <br>
+    <input type="text" name="usuario" required>
+    <br>
+    <br>
+    <label for="Email" class="FonteEmail">Email</label>
+    <br>
+    <br>
+    <input type="email" name="email" required>
+    <br>
+    <br>    
+    <label for="cep" name="cep" class="FonteCep" maxlength="8">CEP</label>
+    <br>
+    <br>        
+    <input type="text" name="cep" required>
+    <br>
+    <br>  
+    <label for="Senha" class="FonteSenha">Senha</label>
+    <br>
+    <br>
+    <input type="password" name="senha" required maxlength="8">
+    <br>
+    <br>
+    <label for="ConfirmarSenha" class="FonteConfirmarSenha">Confirmar Senha</label>
+    <br>
+    <br>
+    <input type="password" name="confirmar_senha" required maxlength="8">
+    <br>
+    <br>
+    <br>  
+     <button type="submit">Criar Conta</button>
+   </div>
+    </form>
+    </div>
+    </div>
+</body>
+</html>
