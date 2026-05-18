@@ -80,7 +80,6 @@ a{
     text-decoration: none;
     color: tomato;
     position: relative;
-    right: -10px;
 }
 .normas{
     position: relative;
@@ -119,6 +118,17 @@ a{
     width:80px;
     height:80px;
 }
+.carrinho{
+  width:50px;
+    height:50px;
+    margin-right:40px;
+      position: relative;
+    right: 10px; 
+}
+.carrinho img{
+    width:80px;
+    height:80px;
+}
 footer{
     background:#1f1f1f;
     color:white;
@@ -137,8 +147,9 @@ footer{
 }
 
 .footer-box h2{
-    margin-bottom:15px;
-    color:#ff3b3b;
+    margin-bottom: 15px;
+    color: #ff3b3b;
+    text-align: center;
 }
 
 .footer-box p{
@@ -150,24 +161,35 @@ footer{
     color:#ccc;
     text-decoration:none;
     line-height:28px;
+        text-align: center;
 }
 
 .footer-box a:hover{
     color:white;
 }
 
+.DireitosAutorais{
+    text-align:center;
+    margin-top:40px;
+    border-top:1px solid #444;
+    padding-top:20px;
+    color:#999;
+}
 
 </style>
 <body>
     <header>
     <div class="topbar">
         <img class="logo" src="pokebola.png" alt="Pokebola">
-   <a href="index.html">Inicio</a>
+        <a href="index.html">Inicio</a>
         <a>Decks</a>
         <a>Produtos</a>
         <a>Leilões</a>
-        <a href="#">Sobre nós</a>
+        <a href="Sobrenos.html">Sobre nós</a>
         <a href="Login.html">Login</a>
+        <a href="Carrinho.html">
+            <img class="carrinho" src="carrinho.png" alt="Carrinho">
+        </a>
     </div>
 </header>
     <div class="background">
@@ -213,9 +235,9 @@ footer{
         </div>
         <div class="footer-box">
             <h2>Links</h2>
-            <a href="#">Início</a><br>
-            <a href="#">Produtos</a><br>
-            <a href="#">Contato</a>
+            <a>Início</a><br>
+            <a>Produtos</a><br>
+            <a>Contato</a>
         </div>
         <div class="footer-box">
             <h2>Redes Sociais</h2>
@@ -224,7 +246,7 @@ footer{
             <p>Discord</p>
         </div>
     </div>
-    <div class="copy">
+    <div class="DireitosAutorais">
         © 2026 Pokémon TCG - Todos os direitos reservados
     </div>
 </footer>

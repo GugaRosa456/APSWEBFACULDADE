@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós - PokéShop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --poke-red: #ff3b3b;
+            --poke-dark-red: #cc1111;
+            --text-dark: #333333;
+            --text-gray: #666666;
+            --bg-light: #d7dde0;
+            --white: #ffffff;
+            --card-bg: #f9f9f9;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        header {
+            width: 100%;
+            background-color: var(--white);
+            border-bottom: 2px solid #cfcfcf;
+        }
+
+        .topbar {
+            width: 100%;
+            height: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .topbar a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .topbar a:hover {
+            color: var(--poke-red);
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            margin-right: 40px;
+            position: relative;
+            left: -10px;
+        }
+
+
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .about-card {
+            background-color: var(--white);
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            padding: 40px;
+        }
+
+        .about-header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 3px solid var(--poke-red);
+            padding-bottom: 20px;
+        }
+
+        .about-header h1 {
+            color: var(--text-dark);
+            font-size: 2.2rem;
+            margin-bottom: 8px;
+        }
+
+        .about-header p {
+            color: var(--text-gray);
+            font-size: 1.1rem;
+            font-style: italic;
+        }
+
+        .section-title {
+            color: var(--poke-dark-red);
+            font-size: 1.5rem;
+            margin: 35px 0 15px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background-color: #ccc;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #444;
+            font-size: 1.05rem;
+            text-align: justify;
+        }
+
+        .mission-box {
+            background-color: var(--card-bg);
+            border-left: 4px solid var(--poke-red);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+            border-top: 1px solid #e0e0e0;
+            border-right: 1px solid #e0e0e0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .mission-box strong {
+            color: var(--poke-dark-red);
+            display: block;
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+
+        .offers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+
+        .offer-item {
+            background: var(--card-bg);
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 20px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .offer-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            border-color: var(--poke-red);
+        }
+
+        .offer-item h4 {
+            color: var(--text-dark);
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .offer-item h4 i {
+            color: var(--poke-red);
+        }
+
+        .offer-item p {
+            font-size: 0.95rem;
+            color: var(--text-gray);
+            margin: 0;
+            text-align: left;
+        }
+
+        .pilars-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            background: var(--white);
+            border-radius: 6px;
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+        }
+
+        .pilars-table th {
+            background-color: #444;
+            color: var(--white);
+            text-align: left;
+            padding: 14px 18px;
+            font-weight: 600;
+        }
+
+        .pilars-table td {
+            padding: 14px 18px;
+            border-bottom: 1px solid #eee;
+            color: #444;
+        }
+
+        .pilars-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .pilar-name {
+            font-weight: bold;
+            color: var(--poke-dark-red);
+            width: 25%;
+        }
+
+        .contact-box {
+            background-color: var(--card-bg);
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 25px;
+            margin-top: 40px;
+        }
+
+        .contact-box h3 {
+            color: var(--text-dark);
+            margin-bottom: 12px;
+            font-size: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-box h3 i {
+            color: var(--poke-red);
+        }
+
+        .contact-details {
+            margin-top: 15px;
+        }
+
+        .contact-details p {
+            margin-bottom: 8px;
+            font-size: 1rem;
+            text-align: left;
+        }
+
+        .contact-details i {
+            color: var(--poke-red);
+            width: 25px;
+        }
+
+        footer {
+            background: #1f1f1f;
+            color: white;
+            padding: 50px 20px;
+            margin-top: 50px;
+            width: 100%;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .footer-box h2 {
+            margin-bottom: 15px;
+            color: #ff3b3b;
+        }
+
+        .footer-box p {
+            color: #ccc;
+            text-decoration: none;
+              text-align: center;
+              line-height: 12px;
+        }
+
+        .footer-box a {
+            color: #ccc;
+            text-decoration: none;
+            line-height: 28px; 
+            text-align: center;
+        }
+
+        .footer-box a:hover {
+            color: white;
+        }
+
+     .DireitosAutorais{
+    text-align:center;
+    margin-top:40px;
+    border-top:1px solid #444;
+    padding-top:20px;
+    color:#999;
+}
+        @media (max-width: 600px) {
+            .topbar {
+                gap: 15px;
+                flex-wrap: wrap;
+                height: auto;
+                padding: 10px;
+            }
+
+            .logo {
+                margin-right: 0;
+            }
+
+            .about-card {
+                padding: 20px;
+            }
+
+            .pilars-table th,
+            .pilars-table td {
+                padding: 10px;
+            }
+
+            .pilar-name {
+                width: 35%;
+            }
+        }
+        .carrinho{
+  width:50px;
+    height:50px;
+    margin-right:40px;
+      position: relative;
+    right: 10px; 
+}
+.carrinho img{
+    width:80px;
+    height:80px;
+}
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="topbar">
+            <img class="logo" src="pokebola.png" alt="Pokebola">
+            <a href="index.html">Inicio</a>
+            <a>Decks</a>
+            <a>Produtos</a>
+            <a >Leilões</a>
+            <a href="Sobrenos.html">Sobre nós</a>
+            <a href="Login.html">Login</a>
+             <a href="Carrinho.html">
+            <img class="carrinho" src="carrinho.png" alt="Carrinho">
+        </a>
+        </div>
+    </header>
+
+    <div class="container">
+        <article class="about-card">
+
+            <header class="about-header">
+                <h1>Sobre a PokéShop</h1>
+                <p>Sala de Imprensa e Canal de Comunicação Oficial</p>
+            </header>
+
+            <p>Bem-vindo à sala de imprensa e canal de comunicação oficial da PokéShop. Fundada em 2026, nossa missão é
+                conectar colecionadores, jogadores e entusiastas do Pokémon Estampas Ilustradas (TCG) a uma experiência
+                de compra segura, rápida e autêntica.</p>
+
+            <h2 class="section-title"><i class="fas fa-users"></i> Quem Somos</h2>
+            <p>A PokéShop é um e-commerce especializado exclusivamente no universo de Pokémon TCG. Nascemos com o
+                propósito de ser a principal referência para o cenário de cartas colecionáveis no Brasil, oferecendo
+                desde os últimos lançamentos de coleções até cartas avulsas raras e acessórios oficiais.</p>
+
+            <div class="mission-box">
+                <strong>Nossa Missão:</strong>
+                Garantir o acesso democrático e seguro a cartas autênticas de Pokémon TCG, fortalecendo a comunidade de
+                jogadores e colecionadores de todas as idades.
+            </div>
+
+            <h2 class="section-title"><i class="fas fa-boxes-stacked"></i> O Que Oferecemos</h2>
+            <p>Operamos com uma plataforma moderna e focada na experiência do usuário, assim garantindo a integridade de
+                cada produto comercializado.</p>
+
+            <div class="offers-grid">
+                <div class="offer-item">
+                    <h4><i class="fas fa-id-card"></i> Cards Avulsos</h4>
+                    <p>Um catálogo atualizado com filtros de raridade, estado de conservação (Mint, Near Mint) e
+                        edições.</p>
+                </div>
+                <div class="offer-item">
+                    <h4><i class="fas fa-box-open"></i> Produtos Selados</h4>
+                    <p>Boosters, decks estruturais, caixas de Elite Trainer (ETB) e coleções especiais direto dos
+                        distribuidores oficiais.</p>
+                </div>
+                <div class="offer-item">
+                    <h4><i class="fas fa-shield-halved"></i> Segurança na Entrega</h4>
+                    <p>Embalagens reforçadas com proteção contra danos (sleeves e shields) para que o produto chegue
+                        impecável ao destino.</p>
+                </div>
+            </div>
+
+            <h2 class="section-title"><i class="fas fa-gem"></i> Nossos Pilares</h2>
+            <table class="pilars-table">
+                <thead>
+                    <tr>
+                        <th>Pilar</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="pilar-name">Autenticidade</td>
+                        <td>100% dos nossos produtos são originais e passam por curadoria especializada.</td>
+                    </tr>
+                    <tr>
+                        <td class="pilar-name">Comunidade</td>
+                        <td>Apoio ao cenário competitivo e fomento a novos jogadores.</td>
+                    </tr>
+                    <tr>
+                        <td class="pilar-name">Inovação</td>
+                        <td>Tecnologia de ponta em logística para entregas no menor tempo possível.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <section class="contact-box">
+                <h3><i class="fas fa-envelope-open-text"></i> Contato para Imprensa e Parcerias</h3>
+                <p>Se você é jornalista, criador de conteúdo ou deseja propor uma parceria comercial com a PokéShop,
+                    entre em contato com a nossa equipe de comunicação:</p>
+
+                <div class="contact-details">
+                    <p><i class="fas fa-envelope"></i> <strong>E-mail:</strong> imprensa@pokeshop.com.br</p>
+                    <p><i class="fas fa-clock"></i> <strong>Atendimento:</strong> Segunda a sexta-feira, das 9h às 18h.
+                    </p>
+                </div>
+            </section>
+        </article>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-box">
+                <h2>Pokémon TCG</h2>
+                <p>Seu site de cartas Pokémon.</p>
+            </div>
+            <div class="footer-box">
+                <h2>Links</h2>
+                <a>Início</a><br>
+                <a>Produtos</a><br>
+                <a>Contato</a>
+            </div>
+            <div class="footer-box">
+                <h2>Redes Sociais</h2>
+                <p>Instagram</p>
+                <p>Facebook</p>
+                <p>Discord</p>
+            </div>
+        </div>
+        <div class="DireitosAutorais">
+            © 2026 Pokémon TCG - Todos os direitos reservados<br>
+        </div>
+    </footer>
+</body>
+
+</html>
