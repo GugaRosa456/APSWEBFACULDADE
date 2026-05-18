@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,51 +17,59 @@
             background-color: #ffffff;
             color: #111;
         }
-header{
-    width:100%;
-    background:white;
-    border-bottom:2px solid #cfcfcf;
-}
-.topbar{
-    width:100%;
-    height:70px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:50px;
-}
-.topbar a{
-    text-decoration:none;
-    color:#333;
-    font-weight:bold;
-    transition:0.3s;
-}
-.topbar a:hover{
-    color:#ff3b3b;
-}
-.logo{
-    width:50px;
-    height:50px;
-    margin-right:40px;
-      position: relative;
-    left: -10px;
-}
 
-.logo img{
-    width:80px;
-    height:80px;
-}
-.carrinho{
-  width:50px;
-    height:50px;
-    margin-right:40px;
-      position: relative;
-    right: 10px; 
-}
-.carrinho img{
-    width:80px;
-    height:80px;
-}
+        header {
+            width: 100%;
+            background: white;
+            border-bottom: 2px solid #cfcfcf;
+        }
+
+        .topbar {
+            width: 100%;
+            height: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .topbar a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .topbar a:hover {
+            color: #ff3b3b;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            margin-right: 40px;
+            position: relative;
+            left: -10px;
+        }
+
+        .logo img {
+            width: 80px;
+            height: 80px;
+        }
+
+        .carrinho {
+            width: 50px;
+            height: 50px;
+            margin-right: 40px;
+            position: relative;
+            right: 10px;
+        }
+
+        .carrinho img {
+            width: 80px;
+            height: 80px;
+        }
+
         .main-product {
             display: flex;
             gap: 50px;
@@ -83,7 +92,7 @@ header{
             max-width: 100%;
             height: auto;
             border-radius: 5px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
 
         .product-details {
@@ -217,88 +226,92 @@ header{
             }
         }
 
-        footer{
-    background:#1f1f1f;
-    color:white;
-    padding:50px 20px;
-    margin-top:50px;
-}
+        footer {
+            background: #1f1f1f;
+            color: white;
+            padding: 50px 20px;
+            margin-top: 50px;
+        }
 
-.footer-container{
-    max-width:1200px;
-    margin:auto;
-    display:flex;
-    flex-wrap:wrap;
-    gap:40px;
-    justify-content:center;
-    text-align:center;
-}
+        .footer-container {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: center;
+            text-align: center;
+        }
 
-.footer-box h2{
-    margin-bottom:15px;
-    color:#ff3b3b;
-}
+        .footer-box h2 {
+            margin-bottom: 15px;
+            color: #ff3b3b;
+        }
 
-.footer-box p{
-      color:#ccc;
-    text-decoration:none;
-    line-height:28px;
-}
-.footer-box a{
-    color:#ccc;
-    text-decoration:none;
-    line-height:28px;
-}
+        .footer-box p {
+            color: #ccc;
+            text-decoration: none;
+            line-height: 28px;
+        }
 
-.footer-box a:hover{
-    color:white;
-}
+        .footer-box a {
+            color: #ccc;
+            text-decoration: none;
+            line-height: 28px;
+        }
 
-.DireitosAutorais{
-    text-align:center;
-    margin-top:40px;
-    border-top:1px solid #444;
-    padding-top:20px;
-    color:#999;
-}
+        .footer-box a:hover {
+            color: white;
+        }
+
+        .DireitosAutorais {
+            text-align: center;
+            margin-top: 40px;
+            border-top: 1px solid #444;
+            padding-top: 20px;
+            color: #999;
+        }
     </style>
 </head>
+
 <body>
-<header>
-    <div class="topbar">
-         <img class="logo" src="Pokebola.png" alt="Pokebola">
-        <a href="index.html">Inicio</a>
-        <a>Decks</a>
-        <a>Produtos</a>
-        <a>Leilões</a>
-        <a href="Sobrenos.html">Sobre nós</a>
-        <a href="Login.html">Login</a>
-        <a href="Carrinho.html">
-            <img class="carrinho" src="Carrinho.png" alt="Carrinho">
-        </a>
-    </div>
-</header>
+    <header>
+        <div class="topbar">
+            <img class="logo" src="Pokebola.png" alt="Pokebola">
+            <a href="index.html">Inicio</a>
+            <a>Decks</a>
+            <a>Produtos</a>
+            <a>Leilões</a>
+            <a href="Sobrenos.html">Sobre nós</a>
+            <a href="Login.html">Login</a>
+            <a href="Carrinho.html">
+                <img class="carrinho" src="Carrinho.png" alt="Carrinho">
+            </a>
+        </div>
+    </header>
     <main>
         <section class="main-product">
+            <!-- n consigui bota a lupa na imagen qndo passa o mouse, dexa quieto -->
             <div class="product-image-container">
                 <img src="venusaur.png" alt="Carta Venusaur PSA 10">
             </div>
-            
+
             <div class="product-details">
                 <h1 class="product-title">Carta Colecionador Premium: Venusaur Base Set (PSA 10)</h1>
                 <p class="product-description">
-                    O lendário Venusaur do Base Set, agora em condição perfeita (GEM MINT 10) certificada pela PSA. Uma joia rara e indispensável para qualquer colecionador sério de Pokémon TCG.
+                    O lendário Venusaur do Base Set, agora em condição perfeita (GEM MINT 10) certificada pela PSA. Uma
+                    joia rara e indispensável para qualquer colecionador sério de Pokémon TCG.
                 </p>
-                
+
                 <div class="product-price">R$ 900,00</div>
-                
+
                 <ul class="product-features">
                     <li>- 1x Carta Holográfica Venusaur (15/102)</li>
                     <li>- 1ª Edição (1999 Pokémon Game)</li>
                     <li>- Graduação PSA 10 (Gem Mint)</li>
                     <li>- Case de acrílico original selado pela PSA</li>
                 </ul>
-                
+
                 <button class="add-to-cart-btn">Adicionar ao carrinho</button>
                 <p class="certification-text">Produto com certificação de autenticidade da PokeShop e PSA.</p>
             </div>
@@ -306,59 +319,67 @@ header{
 
         <section class="related-products">
             <h2 class="related-title">Produtos relacionados</h2>
-            
+
+            <!-- os coments em baxo tbm copiei pra n dexa vazio kk -->
             <div class="products-grid">
                 <div class="product-card">
                     <img src="gengar.png" alt="Pelúcia Gengar">
                     <h3 class="card-title">Pelúcia Articulada Gengar</h3>
-                    <p class="card-desc">Invoque o Gengar mais travesso! Pelúcia macia com a língua de fora, perfeita para abraçar ou assustar seus oponentes.</p>
+                    <p class="card-desc">Invoque o Gengar mais travesso! Pelúcia macia com a língua de fora, perfeita
+                        para abraçar ou assustar seus oponentes.</p>
                     <div class="card-price">R$ 120,00</div>
                     <div class="card-comment-title">Novo Comentário</div>
-                    <p class="card-comment">"Cuidado com o sorriso! Esta pelúcia tem o mesmo sorriso travesso e a língua de fora que todos amamos do Gengar."</p>
+                    <p class="card-comment">"Cuidado com o sorriso! Esta pelúcia tem o mesmo sorriso travesso e a língua
+                        de fora que todos amamos do Gengar."</p>
                 </div>
 
                 <div class="product-card">
                     <img src="rivais.png" alt="Elite Trainer Box Mewtwo">
                     <h3 class="card-title">Elite Trainer Box: Mewtwo Destined Rivals</h3>
-                    <p class="card-desc">O confronto supremo entre Mewtwo e Giovanni. Contém boosters, sleeves, dados e muito mais!</p>
+                    <p class="card-desc">O confronto supremo entre Mewtwo e Giovanni. Contém boosters, sleeves, dados e
+                        muito mais!</p>
                     <div class="card-price">R$ 350,00</div>
                     <div class="card-comment-title">Novo Comentário</div>
-                    <p class="card-comment">"A batalha entre criador e criação atinge o ápice! Uma caixa imperdível para qualquer fã de Mewtwo e Giovanni."</p>
+                    <p class="card-comment">"A batalha entre criador e criação atinge o ápice! Uma caixa imperdível para
+                        qualquer fã de Mewtwo e Giovanni."</p>
                 </div>
 
                 <div class="product-card">
                     <img src="blastoise.png" alt="Carta Blastoise">
                     <h3 class="card-title">Carta Vintage Blastoise (Base Set)</h3>
-                    <p class="card-desc">Traga o power de Kanto para o seu baralho! Uma carta clássica e procurada para colecionadores.</p>
+                    <p class="card-desc">Traga o power de Kanto para o seu baralho! Uma carta clássica e procurada para
+                        colecionadores.</p>
                     <div class="card-price">R$ 800,00</div>
                     <div class="card-comment-title">Novo Comentário</div>
-                    <p class="card-comment">"O rei dos Pokémon de Água, com sua armadura e canhões icônicos, está pronto para o combate. Uma peça de história do TCG."</p>
+                    <p class="card-comment">"O rei dos Pokémon de Água, com sua armadura e canhões icônicos, está pronto
+                        para o combate. Uma peça de história do TCG."</p>
                 </div>
             </div>
         </section>
     </main>
-<footer>
-    <div class="footer-container">
-        <div class="footer-box">
-            <h2>Pokémon TCG</h2>
-            <p>Seu site de cartas Pokémon.</p>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-box">
+                <h2>Pokémon TCG</h2>
+                <p>Seu site de cartas Pokémon.</p>
+            </div>
+            <div class="footer-box">
+                <h2>Links</h2>
+                <a>Início</a><br>
+                <a>Produtos</a><br>
+                <a>Contato</a>
+            </div>
+            <div class="footer-box">
+                <h2>Redes Sociais</h2>
+                <p>Instagram</p>
+                <p>Facebook</p>
+                <p>Discord</p>
+            </div>
         </div>
-        <div class="footer-box">
-            <h2>Links</h2>
-            <a>Início</a><br>
-            <a>Produtos</a><br>
-            <a>Contato</a>
+        <div class="DireitosAutorais">
+            © 2026 Pokémon TCG - Todos os direitos reservados
         </div>
-        <div class="footer-box">
-            <h2>Redes Sociais</h2>
-            <p>Instagram</p>
-            <p>Facebook</p>
-            <p>Discord</p>
-        </div>
-    </div>
-    <div class="DireitosAutorais">
-        © 2026 Pokémon TCG - Todos os direitos reservados
-    </div>
-</footer>
+    </footer>
 </body>
+
 </html>
