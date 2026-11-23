@@ -1,303 +1,41 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pokémon TCG</title>
-<style>  
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: Arial, Helvetica, sans-serif;
-}
-body{
-    background:#d7dde0;
-}
-header{
-    width:100%;
-    background:white;
-    border-bottom:2px solid #cfcfcf;
-}
-.topbar{
-    width:100%;
-    height:70px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:50px;
-}
-.topbar a{
-    text-decoration:none;
-    color:#333;
-    font-weight:bold;
-    transition:0.3s;
-}
-.topbar a:hover{
-    color:#ff3b3b;
-}
-.produtos{
-    width:100%;
-    padding:50px 0;
-    display:flex;
-    justify-content:center;
-    
-}
-.box-produtos{
-    width:1100px;
-}
-
-.titulo{
-    text-align:center;
-    margin-bottom:30px;
-    color:#222;
-    font-size:28px;
-}
-
-.lista{
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    flex-wrap:wrap;
-}
-
-.card{
-    width:200px;
-    background:white;
-    border-radius:10px;
-    padding:15px;
-    box-shadow:0 0 10px rgba(0,0,0,0.15);
-    transition:0.3s;
-}
-
-.card:hover{
-    transform:translateY(-5px);
-}
-
-.card img{
-    width:100%;
-    border-radius:8px;
-}
-
-.card h3{
-    margin-top:10px;
-    font-size:18px;
-    color:#222;
-}
-
-.preco{
-    color:green;
-    font-weight:bold;
-    margin:10px 0;
-    font-size:18px;
-}
-
-.botao{
-    width:100%;
-    padding:10px;
-    border:none;
-    border-radius:6px;
-    background:#ff3b3b;
-    color:white;
-    font-weight:bold;
-    cursor:pointer;
-    transition:0.3s;
-}
-
-.botao:hover{
-    background:#d92d2d;
-}
-
-footer{
-    background:#1f1f1f;
-    color:white;
-    padding:50px 20px;
-    margin-top:50px;
-}
-
-.footer-container{
-    max-width:1200px;
-    margin:auto;
-    display:flex;
-    flex-wrap:wrap;
-    gap:40px;
-    justify-content:center;
-    text-align:center;
-}
-
-.footer-box h2{
-    margin-bottom:15px;
-    color:#ff3b3b;
-}
-
-.footer-box p{
-      color:#ccc;
-    text-decoration:none;
-    line-height:28px;
-}
-.footer-box a{
-    color:#ccc;
-    text-decoration:none;
-    line-height:28px;
-}
-
-.DireitosAutorais{
-    text-align:center;
-    margin-top:40px;
-    border-top:1px solid #444;
-    padding-top:20px;
-    color:#999;
-}
-  
-.logo{
-    width:50px;
-    height:50px;
-    margin-right:40px;
-      position: relative;
-    left: -10px;
-}
-
-.logo img{
-    width:80px;
-    height:80px;
-}
-.carrinho{
-  width:50px;
-    height:50px;
-    margin-right:40px;
-      position: relative;
-    right: 10px; 
-}
-.carrinho img{
-    width:80px;
-    height:80px;
-}
-.carrossel-container {
-    width: 100%;
-    height: 500px;
-    margin: 30px auto 0 auto;
-    overflow: hidden;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    
-}
-
-.carrossel-slides {
-    display: flex;
-    width: 300%;
-    height: 100%;
-    animation: deslizar 12s infinite ease-in-out;
-}
-
-.slide {
-    width: 100%;
-    height: 100%;
-}
-
-.slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-@keyframes deslizar {
-    0%, 25% {
-        transform: translateX(0);
-    }
-    33%, 58% {
-        transform: translateX(-33.33%);
-    }
-    66%, 91% {
-        transform: translateX(-66.66%);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
-
-
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Coleção de Kanto | PokéShop</title>
+  <link rel="stylesheet" href="loja.css">
+  <script src="loja.js" defer></script>
 </head>
 <body>
-<header>
-    <div class="topbar">
-         <img class="logo" src="Pokebola.png" alt="Pokebola">
-        <a href="index.html">Inicio</a>
-        <a>Decks</a>
-        <a>Produtos</a>
-        <a>Leilões</a>
-        <a href="Sobrenos.html">Sobre nós</a>
-        <a href="Login.html">Login</a>
-        <a href="Carrinho.html">
-            <img class="carrinho" src="Carrinho.png" alt="Carrinho">
-        </a>
-    </div>
-</header>
-<!-- peguei esse carosel no youtube espero q n quebre no clular -->
-<div class="carrossel-container">
-    <div class="carrossel-slides">
-        <div class="slide"><img src="1.png" alt="Destaque 1"></div>
-        <div class="slide"><img src="2.png" alt="Destaque 2"></div>
-        <div class="slide"><img src="3.png" alt="Destaque 3"></div>
-    </div>
-</div>
-<!-- as imagen puxei direto de um repositorio no git  -->
-<div class="produtos">
-
-    <div class="box-produtos">
-        <h2 class="titulo">Produtos em Destaque</h2>
-        <div class="lista">
-            <div class="card">
-                <img src="https://images.pokemontcg.io/base1/4.png" alt="">
-                <h3>Charizard</h3>
-                <p class="preco">R$ 199,90</p>
-                <button class="botao">Comprar</button>
-            </div>
-            <div class="card">
-                <img src="https://images.pokemontcg.io/base1/2.png" alt="">
-                <h3>Blastoise</h3>
-                <p class="preco">R$ 800,00</p>
-                <button class="botao">Comprar</button>
-            </div>
-            <a href="TelaProduto.html">
-            <div class="card">
-                <img src="https://images.pokemontcg.io/base1/15.png" alt="">
-                <h3>Venusaur</h3>
-                <p class="preco">R$ 900,00</p>
-                <button class="botao">Comprar</button>
-            </div>
-</a>
-            <div class="card">
-                <img src="https://images.pokemontcg.io/base1/58.png" alt="">
-                <h3>Pikachu</h3>
-                <p class="preco">R$ 89,90</p>
-                <button class="botao">Comprar</button>
-            </div>
-        </div>
-    </div>
-</div>
-<footer>
-    <div class="footer-container">
-        <div class="footer-box">
-            <h2>Pokémon TCG</h2>
-            <p>Seu site de cartas Pokémon.</p>
-        </div>
-        <div class="footer-box">
-            <h2>Links</h2>
-            <a>Início</a><br>
-            <a>Produtos</a><br>
-            <a>Contato</a>
-        </div>
-        <div class="footer-box">
-            <h2>Redes Sociais</h2>
-            <p>Instagram</p>
-            <p>Facebook</p>
-            <p>Discord</p>
-        </div>
-    </div>
-    <div class="DireitosAutorais">
-        © 2026 Pokémon TCG - Todos os direitos reservados
-    </div>
-</footer>
+<a class="skip" href="#principal">Pular para o conteúdo</a>
+<header class="mast"><div class="navwrap"><a class="brand" href="index.html"><i class="ball"></i>PokéShop</a><nav aria-label="Principal"><a href="index.html#catalogo">Cartas</a><a href="Sobrenos.html">Sobre a loja</a></nav><div class="tools"><a href="Login.html">Entrar</a><a class="bag" href="Carrinho.html">Carrinho <b data-count>0</b></a></div></div></header>
+<main id="principal">
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-copy"><span class="edition"><i></i> POKÉMON TCG / BASE SET</span>
+    <h1>Lendas de<br><em>Kanto.</em></h1>
+    <p>De Pallet para sua coleção. Encontre as cartas dos parceiros que marcaram a primeira jornada.</p>
+    <a class="button primary" href="#catalogo">Explorar cartas</a></div>
+    <a class="hero-art" href="TelaProduto.html?carta=charizard" aria-label="Ver a carta Charizard"><div class="disc"></div><img src="art/6.webp" alt="" width="475" height="475"><span class="specimen">Nº 006 &nbsp; / &nbsp; CHARIZARD</span></a>
+  </div>
+</section>
+<section id="catalogo" class="wrap catalog"><small class="section-label">POKÉDEX / KANTO</small><h2>Cartas em destaque</h2>
+  <div class="filters" role="group" aria-label="Filtrar cartas por tipo"><button type="button" data-filter="Todas" aria-pressed="true">Todas</button><button type="button" data-filter="Fogo" aria-pressed="false">Fogo</button><button type="button" data-filter="Água" aria-pressed="false">Água</button><button type="button" data-filter="Planta" aria-pressed="false">Planta</button><button type="button" data-filter="Elétrico" aria-pressed="false">Elétrico</button></div>
+  <div class="grid">
+    <article class="tile" data-type="Fogo"><a href="TelaProduto.html?carta=charizard">
+      <div class="art t6"><span class="dex">Nº 006</span><img src="art/6.webp" width="475" height="475" alt="Charizard"></div>
+      <div class="tiletext"><small>BASE SET · 004/102</small><h3>Charizard</h3><span class="type t6">Fogo</span><div class="price">R$ 199,90<span>Ver carta</span></div></div></a></article>
+    <article class="tile" data-type="Água"><a href="TelaProduto.html?carta=blastoise">
+      <div class="art t9"><span class="dex">Nº 009</span><img src="art/9.webp" width="475" height="475" alt="Blastoise"></div>
+      <div class="tiletext"><small>BASE SET · 002/102</small><h3>Blastoise</h3><span class="type t9">Água</span><div class="price">R$ 800,00<span>Ver carta</span></div></div></a></article>
+    <article class="tile" data-type="Planta"><a href="TelaProduto.html?carta=venusaur">
+      <div class="art t3"><span class="dex">Nº 003</span><img src="art/3.webp" width="475" height="475" alt="Venusaur"></div>
+      <div class="tiletext"><small>BASE SET · 015/102</small><h3>Venusaur</h3><span class="type t3">Planta</span><div class="price">R$ 900,00<span>Ver carta</span></div></div></a></article>
+    <article class="tile" data-type="Elétrico"><a href="TelaProduto.html?carta=pikachu">
+      <div class="art t25"><span class="dex">Nº 025</span><img src="art/25.webp" width="475" height="475" alt="Pikachu"></div>
+      <div class="tiletext"><small>BASE SET · 058/102</small><h3>Pikachu</h3><span class="type t25">Elétrico</span><div class="price">R$ 89,90<span>Ver carta</span></div></div></a></article></div><p class="sr" role="status" id="results"></p>
+</section></main>
+<footer><a class="brand" href="index.html"><i class="ball"></i>PokéShop</a><span>Pokémon TCG · Projeto acadêmico</span><a href="Sobrenos.html">Sobre a loja</a></footer>
 </body>
 </html>
